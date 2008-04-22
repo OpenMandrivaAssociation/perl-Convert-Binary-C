@@ -12,6 +12,8 @@ Group:		Development/Perl
 Source:		ftp.perl.org/pub/CPAN/modules/by-module/Convert/%{module}-%{version}.tar.bz2
 Url:		http://search.cpan.org/dist/%{module}/
 
+BuildRequires:	perl-devel
+
 #BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-root
 
