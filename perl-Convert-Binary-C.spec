@@ -1,7 +1,7 @@
 %define module	Convert-Binary-C
 %define name	perl-%{module}
-%define version 0.71
-%define release %mkrel 2
+%define version 0.72
+%define release %mkrel 1
 
 Name:		%{name}
 Version:	%{version}
@@ -9,13 +9,10 @@ Release:	%{release}
 Summary:	%{module} module for perl
 License:	GPL or Artistic
 Group:		Development/Perl
-Source:		ftp.perl.org/pub/CPAN/modules/by-module/Convert/%{module}-%{version}.tar.bz2
 Url:		http://search.cpan.org/dist/%{module}/
-
+Source:     http://www.cpan.org/modules/by-module/Convert/%{module}-%{version}.tar.gz
 BuildRequires:	perl-devel
-
-#BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-root
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Convert::Binary::C is a preprocessor and parser for C type definitions. 
