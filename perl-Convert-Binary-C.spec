@@ -1,6 +1,6 @@
 %define module	Convert-Binary-C
 %define name	perl-%{module}
-%define version 0.72
+%define version 0.73
 %define release %mkrel 1
 
 Name:		%{name}
