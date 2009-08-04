@@ -1,18 +1,18 @@
-%define module	Convert-Binary-C
-%define name	perl-%{module}
-%define version 0.74
-%define release %mkrel 1
+%define upstream_name	 Convert-Binary-C
+%define upstream_version 0.74
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-Summary:	%{module} module for perl
-License:	GPL or Artistic
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:	%{upstream_name} module for perl
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{module}/
-Source:     http://www.cpan.org/modules/by-module/Convert/%{module}-%{version}.tar.gz
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:    http://www.cpan.org/modules/by-module/Convert/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Convert::Binary::C is a preprocessor and parser for C type definitions. 
@@ -32,7 +32,7 @@ Beyond that, the module offers a lot of convenience methods to retrieve
 information about the C types that have been parsed.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -54,4 +54,3 @@ rm -rf %{buildroot}
 %doc Changes README
 %{perl_vendorlib}/
 %{_mandir}/*/*
-
