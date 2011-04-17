@@ -1,9 +1,9 @@
 %define upstream_name	 Convert-Binary-C
-%define upstream_version 0.74
+%define upstream_version 0.76
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:	%{upstream_name} module for perl
 License:	GPL+ or Artistic
